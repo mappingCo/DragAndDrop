@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Cada oveja con su pareja</title>
+  <link rel="stylesheet" href="dragdrop.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="dragdrop.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <h2 id="texto">Pon cada personaje en el lado correcto</h2>
+    <section id="cajaimagenes">
+      <img id="solo" src="solo.png" alt="revel">
+      <img id="leia" src="leia.png" alt="revel">
+      <img id="maul" src="red.png" alt="dark">
+      <img id="vader" src="vader.png" alt="dark">
+    </section>
+    <div class="canvas" >
+      <h2>lado oscuro</h2>
+      <canvas id="DarkSideCanvas"></canvas>
+    </div>
+    <div class="canvas">
+      <h2>lado rebelde</h2>
+      <canvas id="RevelSideCanvas"></canvas>
+    </div> 
+  </div>
+</body>
+</html>
