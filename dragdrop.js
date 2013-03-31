@@ -2,7 +2,7 @@ function iniciar(){
   var imagenes=document.querySelectorAll('#cajaimagenes > img');
   for(var i=0; i<imagenes.length; i++){
     imagenes[i].addEventListener('dragstart', arrastrado, false);
-    //imagenes[i].addEventListener('dragend', finalizado, false);
+
   }
   lienzoA=document.getElementById('DarkSideCanvas');
   lienzoB=document.getElementById('RevelSideCanvas');
@@ -20,6 +20,7 @@ function arrastrado(e){
   e.dataTransfer.setData('Text', elemento.getAttribute('id'));
   e.dataTransfer.setDragImage(e.target, 0, 0);
 }
+//check if the character is in the right side 
 function comprobar(e){
   e.preventDefault();
 
@@ -31,26 +32,26 @@ function comprobar(e){
   if(box == 'DarkSideCanvas') { 
     if(lado == 'dark') {
       lienzo=document.getElementById('DarkSideCanvas');
-      $("#texto").html("Bienvenido al lado oscuro")
+      $("#texto").html("Welcome to the dark side")
       dibujar();
     }
     else {
-      $("#texto").html("maaaaaaaaaal, aqui van los malos");
+      $("#texto").html("wrong, only the bad guys stay here");
     }
   }  
   if(box == 'RevelSideCanvas') {  
     if(lado == 'revel')  {
       lienzo=document.getElementById('RevelSideCanvas');
-      $("#texto").html("que la fuerza sea contigo")
+      $("#texto").html("May the force be with you")
 
       dibujar();
     }
     else  {
-       $("#texto").html("maaaaaaaaaal, aqui van los buenos");
+       $("#texto").html("wrong, only the good ones stay here");
     }      
   }  
 }
-
+//draw images into the right canvas element
 function dibujar(e){
   contexto=lienzo.getContext('2d');
   if (id=="solo" || id=="maul") {
@@ -62,8 +63,6 @@ function dibujar(e){
     var posy=10;
   }
   $("#" + id).remove();
-
-  
   
   contexto.drawImage(elemento,posx,posy,120,120);
 }
