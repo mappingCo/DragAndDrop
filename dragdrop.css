@@ -1,0 +1,37 @@
+#DarkSideCanvas{
+  float: left;
+  width: 500px;
+  height: 230px;
+  margin: 10px;
+  border: 1px solid #999999;
+}
+#RevelSideCanvas{
+  float: left;
+  width: 500px;
+  height: 230px;
+  margin: 10px;
+  border: 1px solid #999999;
+  background: #fff;
+}
+.canvas {
+   float: left;
+}
+h2 {
+   margin: 0px 10px;
+}
+#cajaimagenes{
+  float: left;
+  width: 170px;
+  min-height: 400px;
+  margin: 35px 10px;
+  border: 1px solid #999999;
+}
+#cajaimagenes > img{
+  float: left;
+  padding: 5px;
+  height: 150px;
+}
+.container {
+  margin: 0 auto;
+  width: 750px;
+}
